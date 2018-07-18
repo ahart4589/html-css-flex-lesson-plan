@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice makes perfect</title>
+    <link rel="stylesheet" type="text/css" href="reset.css"/>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+<body>
+    <!-- The navbar contains examples of using specificity to target elements and override values and also how to use position to override flex -->
+    <div class="navbar">
+        <div class="even-box even-box-1"></div>
+        <div class="even-box" id="even-box-2"></div>
+        <div class="even-box even-box-3" id="even-box-3"></div>
+        <div class="even-box even-box-4" id="even-box-4" ></div>
+        <div class="even-box" id="even-box-5" style="background-color: green"></div>
+        <div class="even-box even-box-6"></div>
+        <div class="even-box even-box-7"></div>
+        <div class="even-box even-box-8"></div>
+    </div>
+    <div class="main-body">
+        <!-- This container is a good example of how to use flex on the parent to dictate how the children will behave -->
+        <div class="content-container-flex">
+            <!-- This is an example of hiding overflow of content -->
+            <div class="content-boxes content-left">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </div>
+            <!-- This is an example of using overflow: auto to allow the user to scroll the box and not have the content overflow the height of the div -->
+            <div class="content-boxes content-right">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </div>
+        </div>
+        <!-- This div will use floats on the children instead of using display flex on the parent. It is still a viable way of laying out your page but it is more complex (!in my opinion!) -->
+        <div class="content-container-float">
+            <img src="https://media.nomadicmatt.com/nsguide.jpg" class="picture"/>
+            <p class="float-text">Hello! I'm a friendly p tag. My favorite things to do are enclose text and take long walks on the beach. I have two dogs; span and charlie. The person writing this thinks he's being really clever but I disagree. You can find me on someone's browser any given weekend night.</p>
+        </div>  
+    </div>
+</body>
+</html>

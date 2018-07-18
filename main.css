@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+/* MAIN CONTENT (FLEX EXAMPLES) */
+.navbar {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+}
+
+.main-body {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.content-container-float {
+    height: 60vh;
+    width: 45vw;
+    border: 1px solid black;
+    padding: 20px;
+}
+.content-container-flex {
+    height: 60vh;
+    width: 45vw;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-boxes {
+    width: 45%;
+    height: 90%;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.content-left {
+    overflow: hidden;
+    /* I can also use align-self on a child element inside of a flex parent to manipulate the element */
+    /* align-self: flex-start; */
+    /* align-self: flex-end; */
+}
+
+.content-right {
+    overflow: auto;
+}
+/* FLOAT EXAMPLE */
+.picture {
+    width: 50%;
+    height: 40%;
+    float: left;
+    margin-right: 30px;
+}
+/* This will clear the float and allow it to take residence on the next line of the document instead of being pushed up right next to the picture */
+/* 
+.float-text {
+    clear: left
+} */
+
+/* NAVBAR (POSITION, SPECIFICITY AND MORE FLEX) */
+
+/* Notice that although I've already defined the styles for navbar up above, I am defining more rules down here. As css goes from top to bottom I can define multiple class rules in different spots. If there are conflicting properties, the class rule defined lower in the document will win. */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    overflow: auto;
+    height: 25vh;
+}
+
+.even-box {
+    height: 80%;
+    width: 20%;
+    background-color: red;
+    margin: 5px;
+}
+
+.even-box-1 {
+    background-color: pink;
+}
+
+#even-box-2 {
+    background-color: yellow
+}
+/* Notice that I defined the class for even box 3 below the id for that same element and they have conflicting background color properties. Id is higher in specificity though so it takes precedence and the color blue is applied. */
+#even-box-3 {
+    background-color: blue;
+}
+
+.even-box-3 {
+    background-color: fuschsia;
+}
+/* Cyan is picked here between id and class. Even though id has more specificity value, !important in the class will override anything */
+.even-box-4 {
+    background-color: cyan !important;
+}
+
+#even-color-4 {
+    background-color: grey;
+}
+
+/* even-box-5 is an id but it will be overwritten by an inline style */
+#even-box-5 {
+    background-color: silver;
+}
+
+/* Using position property to move elements positioned via flex */
+.even-box-6 {
+    position: relative;
+    top: -16px;
+}
+
+.even-box-7 {
+    position: relative;
+    left: 10px;
+    top: 30px;
+}
